@@ -1,13 +1,7 @@
-import React, {useEffect,useState} from 'react'
+import React, {components,useEffect,useState} from 'react'
+import Layout from "./Layout";
 import axios from "axios";
 
-// const Global = () => {
-//     return (
-//         <div>
-//           <h1>GLOBAL</h1>
-//         </div>
-//     )
-// }
 
 const Global = () => {
     const [users, setUsers] = useState([])
@@ -17,13 +11,26 @@ const Global = () => {
           .get("https://covid19.mathdro.id/api")
           .then((response) => setUsers(response.data));
 
-    }, [])
+    }, []);
+
     console.log(users);
-    return(
-        <>
-        <p>GLOBAL API</p>
-        </>
-    )
-}
+
+    return (
+        <h1>GLOBAL</h1>
+        // <>
+        //     {
+        //         users.map((item) => {
+        //             return (
+        //                 <Layout
+        //                 confirmed={item.confirmed}
+        //                 deaths={item.deaths}
+        //                 recovered={item.recovered}
+        //                 />
+        //             );
+        //         })
+        //     }
+        // </>
+    );
+};
 
 export default Global
