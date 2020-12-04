@@ -23,7 +23,7 @@ const App = () => {
           </li>
           
           <li>
-             <Link to="/Global">Provinsi Data</Link>
+             <Link to="/Provinsi">Provinsi Data</Link>
           </li>
           
        </ul>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Layout = ({confirmed, deaths, recovered}) =>{
+const Card = ({confirmed, deaths, recovered}) =>{
     return (
         <div className="card-container">
             <p>{confirmed}</p>
@@ -10,4 +10,4 @@ const Layout = ({confirmed, deaths, recovered}) =>{
     )
 }
 
-export default Layout;
+export default Card;

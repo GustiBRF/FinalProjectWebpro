@@ -1,5 +1,4 @@
 import React, {components,useEffect,useState} from 'react'
-import Layout from "./Layout";
 import axios from "axios";
 
 
@@ -16,7 +15,7 @@ const Indo = () => {
     console.log(users);
 
     return (
-        <h1>INDO</h1>
+        <h1>INDO PAGES</h1>
         // <>
         //     {
         //         users.map((item) => {

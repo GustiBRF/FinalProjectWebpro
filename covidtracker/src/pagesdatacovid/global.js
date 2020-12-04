@@ -1,6 +1,6 @@
 import React, {components,useEffect,useState} from 'react'
-import Layout from "./Layout";
 import axios from "axios";
+import Card from './Card';
 
 
 const Global = () => {
@@ -9,28 +9,27 @@ const Global = () => {
     useEffect(()  => {
           axios
           .get("https://covid19.mathdro.id/api")
-          .then((response) => setUsers(response.data));
+          .then((response) => setUsers(response.confirmed));
 
     }, []);
 
     console.log(users);
 
     return (
-        <h1>Global</h1>
-        // <>
-        //      {
-        //          users.map((item) => {
-        //              return (
-        //                  <Layout
-        //                  confirmed={item.confirmed}
-        //                  deaths={item.deaths}
-        //                  recovered={item.recovered}
-        //                  />
-        //              );
-        //          })
-        //      };
+       
+        <>
+             {users.map((item) => {
+                     return (
+                         <Card
+                         confirmed={item.confirmed}
+                         deaths={item.deaths}
+                         recovered={item.recovered}
+                         />
+                     );
+                 })
+             };
 
-        // </>
+        </>
     )
 
  }
