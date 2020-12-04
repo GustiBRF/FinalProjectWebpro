@@ -16,21 +16,23 @@ const Global = () => {
     console.log(users);
 
     return (
-        <h1>GLOBAL</h1>
+        <h1>Global</h1>
         // <>
-        //     {
-        //         users.map((item) => {
-        //             return (
-        //                 <Layout
-        //                 confirmed={item.confirmed}
-        //                 deaths={item.deaths}
-        //                 recovered={item.recovered}
-        //                 />
-        //             );
-        //         })
-        //     }
-        // </>
-    );
-};
+        //      {
+        //          users.map((item) => {
+        //              return (
+        //                  <Layout
+        //                  confirmed={item.confirmed}
+        //                  deaths={item.deaths}
+        //                  recovered={item.recovered}
+        //                  />
+        //              );
+        //          })
+        //      };
 
-export default Global
+        // </>
+    )
+
+ }
+
+export default Global;
