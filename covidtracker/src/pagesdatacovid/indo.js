@@ -1,4 +1,5 @@
 import React, {components,useEffect,useState} from 'react'
+import Layout from "./Card";
 import axios from "axios";
 
 
@@ -8,7 +9,7 @@ const Indo = () => {
     useEffect(()  => {
           axios
           .get("https://indonesia-covid-19.mathdro.id/api")
-          .then((response) => setUsers(response.data));
+          .then((response) => setUsers(response));
 
     }, []);
 

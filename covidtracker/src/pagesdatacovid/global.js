@@ -4,32 +4,33 @@ import Card from './Card';
 
 
 const Global = () => {
-    const [users, setUsers] = useState([])
+    const [conf, setconf] = useState([])
+    const [rec, setrec] = useState([])
+    const [det, setdet] = useState([])
 
     useEffect(()  => {
           axios
           .get("https://covid19.mathdro.id/api")
-          .then((response) => setUsers(response.confirmed));
+          .then((response) => {
+              setconf(response.data.confirmed.value)
+              setrec(response.data.recovered.value)
+              setdet(response.data.deaths.value)
+            });
 
     }, []);
 
-    console.log(users);
+    // console.log(users);
 
     return (
-       
-        <>
-             {users.map((item) => {
-                     return (
-                         <Card
-                         confirmed={item.confirmed}
-                         deaths={item.deaths}
-                         recovered={item.recovered}
-                         />
-                     );
-                 })
-             };
 
-        </>
+        <div>
+            <h1>Global</h1>
+             <p>Confirmed : {conf}</p>
+             <p>Recovered : {rec}</p>
+             <p>Deaths : {det}</p>
+        </div>
+  
+
     )
 
  }

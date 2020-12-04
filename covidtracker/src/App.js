@@ -12,6 +12,7 @@ const App = () => {
 
   <BrowserRouter>
    <div>
+      <h1> COVID TRACKER </h1>
     <nav>
        <ul>
           <li>
