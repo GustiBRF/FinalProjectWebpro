@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Card = ({confirmed, recovered,deaths}) =>{
+const Card = ({provinsi, kasusPositif,kasusSembuh}) =>{
     return (
         <div className="card-container">
-            <p>Confirmed:{confirmed}</p>
-            <p>Recovered: {recovered}</p>
-            <p>Deaths: {deaths}</p>
+            <p>provinsi:{provinsi}</p>
+            <p>kasusPositif: {kasusPositif}</p>
+            <p>kasusSembuh: {kasusSembuh}</p>
         </div>
     )
 }

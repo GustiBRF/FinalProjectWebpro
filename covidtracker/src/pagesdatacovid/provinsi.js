@@ -1,34 +1,39 @@
 import React, {components,useEffect,useState} from 'react'
 import axios from "axios";
+import Card from './Card'
 
 
 const Provinsi = () => {
-    const [users, setUsers] = useState([])
+    const [prov, setProv] = useState([])
+    // const [kasPos, setPos] = useState([])
+    // const [kasSem, setSem] = useState([])
 
     useEffect(()  => {
           axios
           .get("https://indonesia-covid-19.mathdro.id/api/provinsi")
-          .then((response) => setUsers(response.data));
+          .then((response) => {
+            setProv(response.data.data)
+            // setPos(response.data.data.kasuPosi)
+            // setSem(response.data.kasusSemb)
+          });
 
     }, []);
 
-    console.log(users);
-
     return (
-         <h1>PROVINSI PAGES</h1>
-        // // <>
-        // //     {
-        // //         users.map((item) => {
-        // //             return (
-        // //                 <Layout
-        // //                 confirmed={item.confirmed}
-        // //                 deaths={item.deaths}
-        // //                 recovered={item.recovered}
-        // //                 />
-        // //             );
-        // //         })
-        // //     }
-        // // </>
+  
+        <>
+
+        {prov.map((item) => {
+                return(
+                    <Card 
+                        provinsi={item.provinsi}
+                        kasusPositif={item.kasusPosi}
+                        kasusSembuh={item.kasusSemb}
+                    />
+                );
+            })}
+        </>
+
     );
 };
 
