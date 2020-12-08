@@ -104,20 +104,3 @@ const Global = () => {
  }
 
 export default Global;
-{/* <h1 className="card-cointainer"> 
-            Positive :
-                 <CountUp 
-                start ={0}
-                end={conf}
-                duration={2.75}
-                separator=","
-                 />
-             </h1> */}
-
-
-             {/* <h1 className="card-container">
-                 Confirmed : {conf}</h1> */}
-{/* 
-             <h1 className="card-container">Recovered : {rec}</h1>
-
-             <h1 className="card-container">Deaths : {det}</h1> */}

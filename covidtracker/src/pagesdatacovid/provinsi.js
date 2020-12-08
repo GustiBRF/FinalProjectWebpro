@@ -53,4 +53,3 @@ const Provinsi = () => {
 };
 
 export default Provinsi;
-
