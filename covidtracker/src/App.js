@@ -12,39 +12,24 @@ const App = () => {
 
   <BrowserRouter>
    <div>
-      <h1> COVID TRACKER </h1>
+     <center>
     <nav>
+    <h1> COVID 19 TRACKER </h1>
        <ul>
-          <li>
-             <Link to="/Global">Global Data</Link>
-          </li>
-
-          <li>
-             <Link to="/Indo">Indo Data</Link>
-          </li>
-          
-          <li>
-             <Link to="/Provinsi">Provinsi Data</Link>
-          </li>
-          
+          <li> <Link className="underlined" to="/Global">Global</Link> </li>
+          <li> <Link className="underlined" to="/Indo">Indonesia</Link> </li>
+          <li>  <Link className="underlined" to="/Provinsi">Provinsi</Link></li>
        </ul>
-    </nav>
+    
 
-         <Switch>
 
-          <Route path="/Global">
-             <Global />
-         </Route>
+          <Route path="/Global">   <Global /></Route>
 
-         <Route path="/Indo">
-            <Indo />
-         </Route>
+         <Route path="/Indo"> <Indo /> </Route>
 
-         <Route path="/Provinsi">
-            <Provinsi />
-         </Route>
-
-            </Switch>
+         <Route path="/Provinsi"><Provinsi /> </Route>
+          </nav>
+          </center>
       </div>
   </BrowserRouter>
 

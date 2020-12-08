@@ -3,9 +3,9 @@ import React from 'react';
 const Card = ({provinsi, kasusPositif,kasusSembuh}) =>{
     return (
         <div className="card-container">
-            <p>provinsi:{provinsi}</p>
-            <p>kasusPositif: {kasusPositif}</p>
-            <p>kasusSembuh: {kasusSembuh}</p>
+            <p>Provinsi:{provinsi}</p>
+            <p>Kasus Positif: {kasusPositif}</p>
+            <p>Kasus Sembuh: {kasusSembuh}</p>
         </div>
     )
 }
